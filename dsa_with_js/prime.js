@@ -25,12 +25,29 @@ function isPrimeOpt(n){
     return true;
 
 }
-console.log(isPrime(7)) //O(n)
-console.log(isPrime(31))
-console.log(isPrime(35))
-console.log("optimize code result of O(sqrt(n))")
-console.log(isPrimeOpt(7))
-console.log(isPrimeOpt(31))
-console.log(isPrimeOpt(35))
+function findPrimeFactors(n){
+    let arr=new Array();
+    if (n < 2) {
+        return [];
+    }
+    for (let i=2;i<(n);i++){
+        if(n %i ===0){
+            arr.push(i);
+        }
+
+    }
+    return arr;
+
+}
+
+// console.log(isPrime(7)) //O(n)
+// console.log(isPrime(31))
+// console.log(isPrime(35))
+// console.log("optimize code result of O(sqrt(n))")
+// console.log(isPrimeOpt(7))
+// console.log(isPrimeOpt(31))
+// console.log(isPrimeOpt(35))
+//factors
+console.log(findPrimeFactors(35))
 
 
