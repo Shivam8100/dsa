@@ -3,7 +3,7 @@ function binarySearch(arr, target) {//[2,5,7,9,12,24,25]  O(logn)
     let end = arr.length - 1;
     while (start <= end) {
         let mid = Math.floor((start + end) / 2);
-        // console.log(mid,"midddd")
+        // console.log(mid,"midddd") test
         if (arr[mid] === target) {
             return mid;
         }
