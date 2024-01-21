@@ -40,23 +40,24 @@ axios.get("https://api.example.com/data2"),
 
 <!--+++++++++++++++++++++++++++++++++ example of promise.allSetteled ++++++++++++++++++++++++++++++++++++++== -->
 
-    const promises = [
-
-Promise.resolve('foo'),
-Promise.reject('bar'),
-Promise.resolve('baz'),
+```javascript
+const promises = [
+  Promise.resolve("foo"),
+  Promise.reject("bar"),
+  Promise.resolve("baz"),
 ];
 
 Promise.allSettled(promises)
-.then(results => {
-results.forEach(result => {
-if (result.status === 'fulfilled') {
-console.log('Value:', result.value);
-} else {
-console.log('Reason:', result.reason);
-}
-});
-})
-.catch(error => {
-console.error(error);
-});
+  .then((results) => {
+    results.forEach((result) => {
+      if (result.status === "fulfilled") {
+        console.log("Value:", result.value);
+      } else {
+        console.log("Reason:", result.reason);
+      }
+    });
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+```
