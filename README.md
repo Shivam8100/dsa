@@ -61,3 +61,6 @@ Promise.allSettled(promises)
     console.error(error);
   });
 ```
+
+<!-- https://ranjeet-singh-salal.vercel.app/#projects
+sample portfolio -->
