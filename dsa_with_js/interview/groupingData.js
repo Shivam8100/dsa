@@ -19,7 +19,7 @@ const obj = [
 //     'sample 4': [ { key: 'sample 4', data: 'Data1' } ]
 //   }
 
-//solution
+//solution+
 let output = {};
 obj.forEach((item) => {
   if (output[item.key]) {
@@ -29,4 +29,12 @@ obj.forEach((item) => {
     output[item.key] = [item];
   }
 });
-console.log(output);
+
+const result = obj.reduce((pv, cv) => {
+  return {
+    ...pv,
+    [cv.key]: [...(pv[cv.key] || []), cv],
+  };
+}, {});
+console.log(result);
+// console.log(output);

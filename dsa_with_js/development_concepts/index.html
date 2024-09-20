@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
- 
+    <script src="./debounce.js" defer></script>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="debounce"
+      placeholder="debounce"
+      oninput="batterFunction()"
+    />
+    <input
+      type="text"
+      id="throttle"
+      oninput="throttledFunction()"
+      placeholder="throttle"
+    />
 
-
- <input type="text" id="debounce" onchange="batterFunction()"/>  
-<script src="./debounce.js" defer></script>  
-<!-- <script>
+    <!-- <script>
 function getData(){
     console.log("checking the data.....")
 }
 </script> -->
-</body>
+  </body>
 </html>
